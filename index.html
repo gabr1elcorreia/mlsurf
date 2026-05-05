@@ -7,6 +7,9 @@
 
 <link rel="icon" type="image/png" href="https://i.imgur.com/ty1WtiZ.png">
 
+<!-- Ícones -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 <style>
 
 *{
@@ -40,12 +43,12 @@ animation:bgMove 12s ease infinite;
 width:100%;
 max-width:420px;
 background:rgba(20,20,20,0.75);
-backdrop-filter:blur(12px);
+backdrop-filter:blur(14px);
 border-radius:28px;
 padding:40px 28px;
 text-align:center;
 border:1px solid rgba(255,255,255,0.08);
-box-shadow:0 20px 50px rgba(0,0,0,0.6);
+box-shadow:0 20px 60px rgba(0,0,0,0.7);
 }
 
 .logo{
@@ -78,14 +81,12 @@ color:#bdbdbd;
 margin-bottom:25px;
 }
 
-.highlight{
-background:#1f1f1f;
-padding:12px 18px;
-border-radius:18px;
-font-size:0.9rem;
-margin-bottom:28px;
-border:1px solid rgba(255,255,255,0.08);
-color:#d0d0d0;
+.section-title{
+margin:20px 0 10px;
+font-size:0.75rem;
+color:#777;
+letter-spacing:1.5px;
+text-transform:uppercase;
 }
 
 .buttons{
@@ -94,52 +95,77 @@ flex-direction:column;
 gap:12px;
 }
 
+/* BOTÕES */
+
 .btn{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
 text-decoration:none;
 padding:14px;
 border-radius:14px;
 font-weight:600;
-transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+transition:all .25s ease;
+opacity:0;
+transform:translateY(10px);
+animation:fadeUp .6s forwards;
 }
+
+.btn i{
+font-size:1rem;
+}
+
+/* animação de entrada */
+.btn:nth-child(1){animation-delay:.1s;}
+.btn:nth-child(3){animation-delay:.2s;}
+.btn:nth-child(4){animation-delay:.3s;}
+.btn:nth-child(6){animation-delay:.4s;}
+.btn:nth-child(7){animation-delay:.5s;}
+
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* tipos */
 
 .btn-primary{
 background:linear-gradient(135deg,#3a3a3a,#222);
 color:white;
 }
 
-.btn-primary:hover{
-transform:translateY(-3px);
-box-shadow:0 12px 25px rgba(0,0,0,0.5);
+.btn-whatsapp{
+background:linear-gradient(135deg,#25D366,#1ebe5d);
+color:white;
+box-shadow:0 0 0 rgba(37,211,102,0.4);
 }
 
-.btn-secondary{
-background:#1a1a1a;
-border:1px solid rgba(255,255,255,0.08);
-color:#e0e0e0;
+.btn-instagram{
+background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
+color:white;
 }
 
-.btn-secondary:hover{
-background:#2a2a2a;
-transform:translateY(-3px);
-box-shadow:0 12px 25px rgba(0,0,0,0.4);
+.btn:hover{
+transform:translateY(-4px) scale(1.02);
+box-shadow:0 12px 30px rgba(0,0,0,0.6);
 }
 
-.footer{
-margin-top:20px;
-font-size:0.8rem;
-color:#777;
+.btn-whatsapp:hover{
+box-shadow:0 0 20px rgba(37,211,102,0.5);
 }
+
+/* mobile */
 
 @media(max-width:480px){
-
 .card{
 padding:32px 22px;
 }
-
 .logo{
 width:140px;
 }
-
 }
 
 </style>
@@ -154,8 +180,7 @@ width:140px;
 <h1>M&L Surf</h1>
 
 <p class="subtitle">
-Está procurando um kit maneiro? Aqui você encontra tudo o que precisa!
-Receba no conforto da sua casa: enviamos para todo o Brasil e realizamos entregas em toda a Grande Vitória. 🚚📦
+Receba no conforto da sua casa. Realizamos entregas em toda a grande Vitória e enviamos para todo o Brasil. 🚚📦
 </p>
 
 <div class="buttons">
@@ -163,19 +188,40 @@ Receba no conforto da sua casa: enviamos para todo o Brasil e realizamos entrega
 <a class="btn btn-primary"
 href="https://mlsurf.store"
 target="_blank">
+<i class="fas fa-globe"></i>
 Compre pelo site
 </a>
 
-<a class="btn btn-secondary"
+<div class="section-title">Vila Velha</div>
+
+<a class="btn btn-whatsapp"
 href="https://api.whatsapp.com/send?phone=5527995821259&text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site!"
 target="_blank">
-Compre pelo WhatsApp
+<i class="fab fa-whatsapp"></i>
+WhatsApp (Vila Velha)
 </a>
-  
-<a class="btn btn-secondary"
-href="https://instagram.com/mlsurf_vv"
+
+<a class="btn btn-instagram"
+href="https://www.instagram.com/mlsurff_vv"
 target="_blank">
-Instagram
+<i class="fab fa-instagram"></i>
+Instagram (Vila Velha)
+</a>
+
+<div class="section-title">Vitória</div>
+
+<a class="btn btn-whatsapp"
+href="https://api.whatsapp.com/send?phone=5527997064244&text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site!"
+target="_blank">
+<i class="fab fa-whatsapp"></i>
+WhatsApp (Vitória)
+</a>
+
+<a class="btn btn-instagram"
+href="https://www.instagram.com/mlsurf_vix"
+target="_blank">
+<i class="fab fa-instagram"></i>
+Instagram (Vitória)
 </a>
 
 </div>
