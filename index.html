@@ -7,7 +7,6 @@
 
 <link rel="icon" type="image/png" href="https://i.imgur.com/ty1WtiZ.png">
 
-<!-- Ícones -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
@@ -26,7 +25,6 @@ align-items:center;
 justify-content:center;
 padding:20px;
 color:#e8e8e8;
-overflow:hidden;
 
 background:linear-gradient(-45deg,#0f0f0f,#1a1a1a,#222,#111);
 background-size:400% 400%;
@@ -95,8 +93,6 @@ flex-direction:column;
 gap:12px;
 }
 
-/* BOTÕES */
-
 .btn{
 display:flex;
 align-items:center;
@@ -116,12 +112,12 @@ animation:fadeUp .6s forwards;
 font-size:1rem;
 }
 
-/* animação de entrada */
 .btn:nth-child(1){animation-delay:.1s;}
 .btn:nth-child(3){animation-delay:.2s;}
 .btn:nth-child(4){animation-delay:.3s;}
 .btn:nth-child(6){animation-delay:.4s;}
 .btn:nth-child(7){animation-delay:.5s;}
+.btn:nth-child(9){animation-delay:.6s;}
 
 @keyframes fadeUp{
 to{
@@ -129,8 +125,6 @@ opacity:1;
 transform:translateY(0);
 }
 }
-
-/* tipos */
 
 .btn-primary{
 background:linear-gradient(135deg,#3a3a3a,#222);
@@ -155,6 +149,15 @@ box-shadow:0 12px 30px rgba(0,0,0,0.6);
 
 .btn-whatsapp:hover{
 box-shadow:0 0 20px rgba(37,211,102,0.5);
+}
+
+/* DIVISOR */
+
+.divider{
+height:1px;
+width:100%;
+background:linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);
+margin:18px 0 10px;
 }
 
 /* mobile */
@@ -184,13 +187,6 @@ Receba no conforto da sua casa. Realizamos entregas em toda a grande Vitória e 
 </p>
 
 <div class="buttons">
-
-<a class="btn btn-primary"
-href="https://mlsurf.store"
-target="_blank">
-<i class="fas fa-globe"></i>
-Compre pelo site
-</a>
 
 <div class="section-title">Vila Velha</div>
 
@@ -222,6 +218,16 @@ href="https://www.instagram.com/mlsurf_vix"
 target="_blank">
 <i class="fab fa-instagram"></i>
 Instagram (Vitória)
+</a>
+
+<!-- SEPARAÇÃO AQUI -->
+<div class="divider"></div>
+
+<a class="btn btn-primary"
+href="https://mlsurf.store"
+target="_blank">
+<i class="fas fa-globe"></i>
+Compre pelo site
 </a>
 
 </div>
